@@ -1,0 +1,9 @@
+function ro=rou(t,series,p,alpha,u,w)     %rou_series_i=(rou_ji1,?ou_jip)^T
+    up=0;
+    down=0;
+    for j=1:p
+        up=up+beta(alpha,j,p)*exp(alpha(j)*tau(t,series,u,w));
+        down=down+beta(alpha,j,p);
+    end
+    ro=up/down;
+end
