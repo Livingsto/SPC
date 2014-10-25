@@ -1,0 +1,11 @@
+function f=fai(t,series,p,alpha,i)
+        a1=0;
+        a2=0;
+        for l=1:p
+            a1=a1+yita(t,series,p,alpha,i)[1,l]*rou(t,series,p,alpha,i,l);
+            for s=1:p
+                a2=a2+yita(t,series,p,alpha,i)[1,l]*yita(t,series,p,alpha,i)[1,s]*rou(t,series,p,alpha,i-min(l,s),abs(l-s));
+            end
+        end
+        f=1-2*a1+a2;
+end
