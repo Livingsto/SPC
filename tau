@@ -1,0 +1,3 @@
+function ta=tau(t,series,u,w)
+ta=t{series}(u)-t{series}(u-w);
+end
