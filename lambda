@@ -1,0 +1,10 @@
+function lam=lambda(alpha,i,p)   %定义lambda_i
+
+lam=1;
+for j=1:p
+   if j~=i
+      lam=lam/(alpha(i)-alpha(j));
+   end
+end
+
+end
