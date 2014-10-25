@@ -1,0 +1,16 @@
+function v=V(t,series,p,alpha,i)
+    v=[];
+    for j=1:p
+        for k=1:p
+            if(i-j>i-k)
+                v(j,k)=rou(t,series,p,alpha,i-j,k-j);
+            else
+                if(i-j==i-k)
+                    v(j,k)=1;
+                else
+                    v(j,k)=rou(t,serise,p,alpha,i-k,j-k);
+                end
+            end
+        end
+    end
+end
