@@ -1,0 +1,27 @@
+m=input('请输入批数');% 批数
+p=1;% AR(p)
+n=1000;%每批原始数据长度
+x=cell(m);
+t=cell(m);
+x_us=cell(m);
+
+
+for j=1:m 
+    times=randint(1,1,[80,100]);
+    for i=0:times       %产生m组 unequally spaced 时间点
+        t{j}=[t{j},(sort(randperm(10,2))+10*i)/1000];
+    end
+    x(j,1)=0;
+    %x(j,2)=1;
+    
+    for i=(1+p):n    %产生m批时间序列
+        x(j,i)=0.8*x(j,i-1)+分布待定！！！！！！！！！！！！！！;
+    end
+
+    x_us{j}=x(j,t{j}*1000);   %产生 unequally spaced 时间序列
+    ni(j)=length(x_us{j}); %每一条unequally spaced ts的长度
+end
+
+
+
+
