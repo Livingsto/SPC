@@ -1,0 +1,8 @@
+function yi=yita(t,series,p,alpha,i)
+    V_seriesi=V(t,series,p,alpha,i);
+    rou_seriesi=[];
+    for j=1:p
+        rou_seriesi=[rouseries_i;rou(t,series,p,alpha,i,j)];
+    end
+    yi=inv(V_seriesi)*rou_seriesi;
+end
