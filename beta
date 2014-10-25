@@ -1,0 +1,8 @@
+function be=beta(alpha,i,p)    %定义beta_i
+be=0;
+for j=1:p
+be=be+lambda(alpha,j,p)/(alpha(i)+alpha(j));
+end
+be=be*lambda(alpha,i,p);
+end
+
