@@ -1,10 +1,10 @@
-function lm=lmm((x,t,m,p,alpha,sigma))
+function lm=lmm((x,t,m,p,para))alpha,sigma
 lm=0;
 for j=1:m
    for i=p+1:length(x{j})
       ts=x{j}(i);
       for k=1:p
-      ts=ts-yita(t,series,p,alpha,i)(1,k)*x{j}(i-k);
+      ts=ts-yita(t,series,p,[para(1):para(p)],i)(1,k)*x{j}(i-k);
       end
-   lm=lm+(ts/(sigma*fai(t,series,p,alpha,i)))^2;
+   lm=lm+(ts/(para(p+1)*fai(t,series,p,[para(1):para(p)],i)))^2;
    
