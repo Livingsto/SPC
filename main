@@ -22,6 +22,6 @@ for j=1:m
     ni(j)=length(x_us{j}); %每一条unequally spaced ts的长度
 end
 
-
+［x，fval,exitflag]=fminsearch(@(para) lmm(x_us,t,m,p,para))
 
 
